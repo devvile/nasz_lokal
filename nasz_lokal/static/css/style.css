@@ -6,7 +6,7 @@
 
 body {
   font-family: "Aquatico";
-  background-color: rgb(21, 37, 37);
+  background: hsl(73, 4%, 41%);
 }
 
 .cat-list {
@@ -17,7 +17,7 @@ body {
 
 .cat-div {
   width: 100vw;
-  height: 15vh;
+  height: 14vh;
   display: flex;
   background-color: royalblue;
   margin: 20x;
@@ -27,6 +27,23 @@ body {
   justify-content: space-around;
   border: 3px solid whitesmoke;
   cursor: pointer;
+}
+
+.wpis {
+  height: 10vh;
+  font-size: 1.6rem;
+}
+
+.nowy-wpis {
+  height: 10vh;
+  background-color: rgba(253, 74, 4, 0.952);
+  font-size: 1.6rem;
+}
+
+.delete-cat {
+  height: 10vh;
+  background-color: rgba(148, 13, 13, 0.822);
+  font-size: 1.6rem;
 }
 
 .cat-div a {
@@ -43,12 +60,74 @@ body {
   filter: brightness(150%);
 }
 
+.cat-right-side {
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
 .items {
   font-size: 20px;
+  margin: 20px;
+}
+.page-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  position: relative;
 }
 
 .logo {
   color: white;
   margin: 20px;
   text-align: center;
+}
+
+.fa-plus-square {
+  position: relative;
+  bottom: 3px;
+}
+
+.fa-plus-square:hover {
+  color: grey;
+}
+
+.fa-arrow-left {
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  top: 3vh;
+  right: 10vw;
+}
+
+.fa-arrow-left:hover {
+  color: grey;
+}
+
+.btn {
+  font-family: "Aquatico";
+  border-radius: 10px;
+  width: 70vw;
+  margin: auto;
+  font-size: 15px;
+}
+
+.form-area {
+  background-color: grey;
+  height: 30vh;
+  margin: 15px 0;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  justify-content: space-evenly;
+}
+
+.form-area input {
+  font-size: 30px;
+  font-family: "Aquatico";
 }

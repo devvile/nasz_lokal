@@ -1,11 +1,42 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>elo tu detail</h1>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{cat.name}}</title>
+    <style>
+      @font-face {
+        font-family: "Aquatico";
+        src: url('{% static "/fonts/aquatico-regular-webfont.woff2" %}');
+      }
+    </style>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="page-top">
+      <h1 class="logo">{{cat.name}}</h1>
+      <a href="{%url 'notki_main'%}"><i class="fa fa-arrow-left fa-2x"></i></a>
+    </div>
+    <div class="cat-list">
+      <div class="cat-div nowy-wpis">
+        <h3>
+          NEW NOTE
+        </h3>
+      </div>
+      {%for notka in notki%}
+      <div class="cat-div wpis">
+        {{notka.name}}
+      </div>
+      {%endfor%}
+      <div class="cat-div delete-cat">
+        <h3>
+          DELETE CAT
+        </h3>
+      </div>
+    </div>
+  </body>
 </html>

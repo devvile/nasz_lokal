@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Title</title>
+    <title>NASZ LOKAL</title>
     <style>
       @font-face {
         font-family: "Aquatico";
@@ -24,18 +24,20 @@
 
       <div class="cat-div">
         <a href="{% url 'detail' cat.id %}">
-          <div class="cat-name"><h3>{{cat.name}}</h3></div>
+          <h3 class="cat-name">{{cat.name}}</h3>
         </a>
         <div class="cat-right-side">
-          <h3 class="items">ITEMS</h3>
+          <h3 class="items">ITEMS: {{cat.notes_number}}</h3>
           <i class="fa fa-plus-square"></i>
         </div>
       </div>
       {% endfor %}
       <div class="cat-div new">
-        <h3>
-          NEW CATEGORY
-        </h3>
+        <a href="{% url 'new_category'%}">
+          <h3>
+            NEW CATEGORY
+          </h3>
+        </a>
       </div>
     </div>
   </body>
