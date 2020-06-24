@@ -1,0 +1,42 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      @font-face {
+        font-family: "Aquatico";
+        src: url('{% static "/fonts/aquatico-regular-webfont.woff2" %}');
+      }
+    </style>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <h1 class="logo">NASZ LOKAL</h1>
+
+    <div class="cat-list">
+      {%for cat in categories%}
+
+      <div class="cat-div">
+        <a href="{% url 'detail' cat.id %}">
+          <div class="cat-name"><h3>{{cat.name}}</h3></div>
+        </a>
+        <div class="cat-right-side">
+          <h3 class="items">ITEMS</h3>
+          <i class="fa fa-plus-square"></i>
+        </div>
+      </div>
+      {% endfor %}
+      <div class="cat-div new">
+        <h3>
+          NEW CATEGORY
+        </h3>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Aquatico";
+  background-color: rgb(21, 37, 37);
+}
+
+.cat-list {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.cat-div {
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  background-color: royalblue;
+  margin: 20x;
+  color: whitesmoke;
+  font-size: 1.8rem;
+  align-items: center;
+  justify-content: space-around;
+  border: 3px solid whitesmoke;
+  cursor: pointer;
+}
+
+.cat-div a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.new {
+  background-color: rgba(253, 74, 4, 0.952);
+  font-size: 1.8rem;
+}
+
+.cat-div:hover {
+  filter: brightness(150%);
+}
+
+.items {
+  font-size: 20px;
+}
+
+.logo {
+  color: white;
+  margin: 20px;
+  text-align: center;
+}
