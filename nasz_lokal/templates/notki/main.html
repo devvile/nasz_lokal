@@ -28,14 +28,16 @@
         </a>
         <div class="cat-right-side">
           <h3 class="items">ITEMS: {{cat.notes_number}}</h3>
-          <i class="fa fa-plus-square"></i>
+          <a href="{% url 'new_note' cat.name%}"
+            ><i class="fa fa-plus fa-lg"></i
+          ></a>
         </div>
       </div>
       {% endfor %}
       <div class="cat-div new">
         <a href="{% url 'new_category'%}">
           <h3>
-            NEW CATEGORY
+            ADD CATEGORY
           </h3>
         </a>
       </div>

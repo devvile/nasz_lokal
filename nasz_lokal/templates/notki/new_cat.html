@@ -19,7 +19,7 @@
   <body>
     <header>
         <div class="page-top">
-        <h1 class="logo">NEW CATEGORY</h1>
+        <h1 class="logo">ADD CATEGORY</h1>
         <a href="{%url 'notki_main'%}"><i class="fa fa-arrow-left fa-2x"></i></a>
         </div>
     </header>
@@ -27,8 +27,9 @@
       <div class="page-main">
           <form method='POST' action="{%url 'add_cat'%}">
         <div class="form-area">
+            {% csrf_token %}
               {{form}}
-              {% csrf_token %}
+   
         </div>
         <button type='submit' value='ok' class="cat-div nowy-wpis btn">
           <h3>

@@ -1,0 +1,41 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>NASZ LOKAL</title>
+    <style>
+      @font-face {
+        font-family: "Aquatico";
+        src: url('{% static "/fonts/aquatico-regular-webfont.woff2" %}');
+      }
+    </style>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="page-top">
+        <h1 class="logo">delete item</h1>
+      </div>
+      <div class="page-main">
+        <div class="form-area del">
+          <p>
+            You're trying to delete
+            <span class="wpis-note">{{wpis.name}} </span> note.</br> Please confirm.
+          </p>
+          <form method="POST" action='{%url "destroy_note" wpis.id%}'>
+              {%csrf_token%}
+          <div class="btn-area">
+              <button>Ok</button>
+            </form>
+              <a href='{%url "notki_main"%}' class='back-btn'><h3>Back</h3></a>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

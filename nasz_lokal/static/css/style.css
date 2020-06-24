@@ -15,6 +15,12 @@ body {
   width: 100vw;
 }
 
+.cat-name {
+  position: absolute;
+  left: 10vw;
+  top: 30%;
+}
+
 .cat-div {
   width: 100vw;
   height: 14vh;
@@ -27,11 +33,13 @@ body {
   justify-content: space-around;
   border: 3px solid whitesmoke;
   cursor: pointer;
+  position: relative;
 }
 
 .wpis {
   height: 10vh;
   font-size: 1.6rem;
+  position: relative;
 }
 
 .nowy-wpis {
@@ -53,7 +61,7 @@ body {
 
 .new {
   background-color: rgba(253, 74, 4, 0.952);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .cat-div:hover {
@@ -64,11 +72,10 @@ body {
   justify-content: space-around;
   display: flex;
   align-items: center;
-  position: relative;
 }
 
 .items {
-  font-size: 20px;
+  font-size: 10px;
   margin: 20px;
 }
 .page-top {
@@ -85,12 +92,13 @@ body {
   text-align: center;
 }
 
-.fa-plus-square {
-  position: relative;
-  bottom: 3px;
+.fa-plus {
+  position: absolute;
+  right: 5vw;
+  top: 32%;
 }
 
-.fa-plus-square:hover {
+.fa-plus:hover {
   color: grey;
 }
 
@@ -118,16 +126,68 @@ body {
 .form-area {
   background-color: grey;
   height: 30vh;
-  margin: 15px 0;
+  margin: 15px 10px;
   color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
   border-radius: 15px;
   justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.del {
+  height: 60vh;
 }
 
 .form-area input {
   font-size: 30px;
   font-family: "Aquatico";
+}
+
+.form-area p {
+  margin: 15px;
+  text-align: center;
+}
+.fa-trash {
+  position: absolute;
+  right: 10vw;
+  top: 30%;
+}
+
+.fa-trash:hover {
+  color: grey;
+}
+
+.wpis-note {
+  color: khaki;
+}
+
+.btn-area {
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+}
+
+.btn-area button {
+  width: 30vw;
+  height: 10vh;
+  margin: 0 50px;
+  border-radius: 15px;
+  background: transparent;
+  color: whitesmoke;
+  font-size: 2rem;
+  font-family: "Aquatico";
+  cursor: pointer;
+}
+.btn-area button:hover {
+  border: 3px solid whitesmoke;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 14px;
+  border: 1px solid whitesmoke;
+  border-radius: 15px;
 }

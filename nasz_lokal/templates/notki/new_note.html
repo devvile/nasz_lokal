@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>{{cat.name}}</title>
+    <title>NASZ LOKAL</title>
     <style>
       @font-face {
         font-family: "Aquatico";
@@ -18,30 +18,14 @@
   </head>
   <body>
     <div class="page-top">
-      <h1 class="logo">{{cat.name}}</h1>
+      <h3 class="logo">{{category.name}} ADD NOTE</h3>
       <a href="{%url 'notki_main'%}"><i class="fa fa-arrow-left fa-2x"></i></a>
     </div>
-    <div class="cat-list">
-      <div class="cat-div nowy-wpis">
-        <a href="{%url 'new_note' cat.name%}">
-          <h3>
-            ADD NOTE
-          </h3>
-        </a>
-      </div>
-      {%for notka in notki%}
-      <div class="cat-div wpis">
-        {{notka.name}}
-        <a href="{% url 'del_note' notka.id%}"
-          ><i class="fa fa-trash" aria-hidden="true"></i
-        ></a>
-      </div>
-      {%endfor%}
-      <div class="cat-div delete-cat">
-        <h3>
-          DELETE CAT
-        </h3>
-      </div>
+    <div class="page-main">
+      <form method="POST" action="{% url 'add_note' category.name %}">
+        {% csrf_token %} {{form}}
+        <button type="submit" value="ok">Submit</button>
+      </form>
     </div>
   </body>
 </html>
