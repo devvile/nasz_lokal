@@ -14,28 +14,23 @@ def detail(request, id):
     kwargs={"cat":categoria,"notki":notki}
     return render(request, 'notki/detail.html', kwargs)
 
-def delete_cat(request, id):
+def del_cat(request, cat):
+    categoria= Category.objects.get(name=cat)
+    kwargs={"cat":categoria}
+    return render(request, 'notki/del_cat.html', kwargs)
+
+def destroy_cat(request, id):
     categoria= Category.objects.get(pk=id)
-    notki= categoria.nalezace.all()
-    kwargs={"cat":categoria,"notki":notki}
-    return render(request, 'notki/detail.html', kwargs)
+    categoria.delete()
+    return redirect('notki_main')
+
 
 def new_cat(request):
     form=AddCat()
     kwargs = {"form": form}
     return render(request, 'notki/new_cat.html', kwargs)
 
-def add_cat(request):
-    form=AddCat
-    kwargs = {"form": form}
-    if request.method == "POST":
-        if form.is_valid():
-            form.save()
-            return redirect('notki_main')
-        else:
-            return redirect('notki_main')
-    else:
-        return render(request, 'notki/new_cat.html', kwargs)
+
 
 def new_note(request, cat):
     form=AddNote()
@@ -54,6 +49,15 @@ def add_note(request, cat):
         form.save()
         return redirect('notki_main')
     return redirect('notki_main')
+
+def add_cat(request):
+    form=AddCat(data=request.POST)
+    kwargs = {"form": form}
+    if form.is_valid():
+        form.save()
+        return redirect('notki_main')
+    return redirect('notki_main')
+
 
 
 def del_note(request,id):

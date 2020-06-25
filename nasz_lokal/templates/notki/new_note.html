@@ -18,14 +18,20 @@
   </head>
   <body>
     <div class="page-top">
-      <h3 class="logo">{{category.name}} ADD NOTE</h3>
+      <h3 class="logo"> ADD NOTE</h3>
       <a href="{%url 'notki_main'%}"><i class="fa fa-arrow-left fa-2x"></i></a>
     </div>
     <div class="page-main">
-      <form method="POST" action="{% url 'add_note' category.name %}">
-        {% csrf_token %} {{form}}
-        <button type="submit" value="ok">Submit</button>
-      </form>
+      <div class="form-area">
+            <div class="note-form">
+                <form method="POST" action="{% url 'add_note' category.name %}">
+                {% csrf_token %} 
+                <div class="note-name"><h4>name:</h4><div>{{form.name}}</div></div> 
+                <div class="note-name text"><h4>note:</h4><div>{{form.note}}</div></div>
+            </div>
+          <button type="submit" value="ok" class='new-note-btn'>Submit</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>

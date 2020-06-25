@@ -26,17 +26,13 @@
     <section>
       <div class="page-main">
           <form method='POST' action="{%url 'add_cat'%}">
-        <div class="form-area">
-            {% csrf_token %}
-              {{form}}
-   
-        </div>
-        <button type='submit' value='ok' class="cat-div nowy-wpis btn">
-          <h3>
-            ADD NEW CATEGORY
-          </h3>
-          </button>
-        </form>
+            <div class="form-area">
+                {% csrf_token %}
+                {{form}}
+    
+            </div>
+            <button type='submit' value='ok' class="cat-div nowy-wpis btn"> ADD NEW CATEGORY</button>
+            </form>
         </div>
       </div>
     </section>

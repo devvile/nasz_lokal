@@ -64,10 +64,6 @@ body {
   font-size: 1.6rem;
 }
 
-.cat-div:hover {
-  filter: brightness(150%);
-}
-
 .cat-right-side {
   justify-content: space-around;
   display: flex;
@@ -125,7 +121,7 @@ body {
 
 .form-area {
   background-color: grey;
-  height: 30vh;
+  height: 60vh;
   margin: 15px 10px;
   color: white;
   font-size: 30px;
@@ -141,8 +137,28 @@ body {
 }
 
 .form-area input {
-  font-size: 30px;
+  font-size: 24px;
   font-family: "Aquatico";
+  margin: 20px 10px;
+  width: 70vw;
+  border-radius: 5px;
+  background: transparent;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  padding: 10px;
+}
+.form-area textarea {
+  width: 70vw;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid whitesmoke;
+  margin: 10px;
+  height: 30vh;
+  color: white;
+  font-size: 20px;
+  position: relative;
+  left: 2px;
+  padding: 10px;
 }
 
 .form-area p {
@@ -190,4 +206,50 @@ body {
   padding: 14px;
   border: 1px solid whitesmoke;
   border-radius: 15px;
+}
+
+.notka {
+  width: 70vh;
+}
+
+.new-note-btn {
+  margin: 20px;
+  color: white;
+  width: 30vw;
+  height: 10%;
+  background-color: darkolivegreen;
+  border-radius: 15px;
+  font-size: 20px;
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  font-size: 1.4rem;
+}
+
+.note-name {
+  display: flex;
+  align-items: center;
+}
+
+.dest {
+  color: red;
+}
+
+.pole-opisu {
+  background-color: darksalmon;
+  opacity: 0;
+  display: none;
+  height: 30vh;
+}
+
+.active {
+  opacity: 1;
+  display: block;
+}
+
+.cat-div:hover {
+  filter: brightness(150%);
 }

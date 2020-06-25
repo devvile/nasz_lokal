@@ -29,19 +29,26 @@
           </h3>
         </a>
       </div>
-      {%for notka in notki%}
-      <div class="cat-div wpis">
-        {{notka.name}}
-        <a href="{% url 'del_note' notka.id%}"
-          ><i class="fa fa-trash" aria-hidden="true"></i
-        ></a>
+      <div id="notki-all">
+        {%for notka in notki%}
+          <div class="cat-div func wpis" >
+            {{notka.name}}
+            <a href="{% url 'del_note' notka.id%}"
+              ><i class="fa fa-trash" aria-hidden="true"></i
+            ></a>
+          </div>
+          <div class="pole-opisu" id="{{notka.id}}"><p>{{notka.note}}</p></div>
+        </div>
+        {%endfor%}
       </div>
-      {%endfor%}
       <div class="cat-div delete-cat">
-        <h3>
-          DELETE CAT
-        </h3>
+        <a href="{% url 'del_cat' cat.name%}">
+          <h3>
+            DELETE CAT
+          </h3>
+        </a>
       </div>
     </div>
+    <script src="{% static 'js/detail-app.js' %}"></script>
   </body>
 </html>
