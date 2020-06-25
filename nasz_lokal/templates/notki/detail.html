@@ -15,6 +15,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="{% static './js/main.js'%}"></script>
   </head>
   <body>
     <div class="page-top">
@@ -33,11 +34,12 @@
         {%for notka in notki%}
           <div class="cat-div func wpis" >
             {{notka.name}}
-            <a href="{% url 'del_note' notka.id%}"
-              ><i class="fa fa-trash" aria-hidden="true"></i
-            ></a>
+       
           </div>
-          <div class="pole-opisu" id="{{notka.id}}"><p>{{notka.note}}</p></div>
+          <div class="pole-opisu" id="{{notka.id}}"><p>{{notka.note}}</p>
+            <a href="{% url 'del_note' notka.id%}"
+            ><i class="fa fa-trash fa-2x" aria-hidden="true"></i
+          ></a></div>
         </div>
         {%endfor%}
       </div>

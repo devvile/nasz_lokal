@@ -6,7 +6,12 @@
 
 body {
   font-family: "Aquatico";
-  background: hsl(73, 4%, 41%);
+  background: rgba(91, 0, 128, 0.62);
+}
+
+:root {
+  --kolor-liter: whitesmoke;
+  --kolor-przyciskow: rgb(185, 185, 185);
 }
 
 .cat-list {
@@ -25,13 +30,12 @@ body {
   width: 100vw;
   height: 14vh;
   display: flex;
-  background-color: royalblue;
+  background-color: lime;
   margin: 20x;
-  color: whitesmoke;
+  color: var(--kolor-liter);
   font-size: 1.8rem;
   align-items: center;
   justify-content: space-around;
-  border: 3px solid whitesmoke;
   cursor: pointer;
   position: relative;
 }
@@ -44,23 +48,23 @@ body {
 
 .nowy-wpis {
   height: 10vh;
-  background-color: rgba(253, 74, 4, 0.952);
+  background-color: var(--kolor-przyciskow);
   font-size: 1.6rem;
 }
 
 .delete-cat {
   height: 10vh;
-  background-color: rgba(148, 13, 13, 0.822);
+  background-color: rgba(6, 66, 177, 0.83);
   font-size: 1.6rem;
 }
 
 .cat-div a {
   text-decoration: none;
-  color: whitesmoke;
+  color: var(--kolor-liter);
 }
 
 .new {
-  background-color: rgba(253, 74, 4, 0.952);
+  background-color: rgb(134, 13, 204);
   font-size: 1.6rem;
 }
 
@@ -83,7 +87,7 @@ body {
 }
 
 .logo {
-  color: white;
+  color: var(--kolor-liter);
   margin: 20px;
   text-align: center;
 }
@@ -99,7 +103,7 @@ body {
 }
 
 .fa-arrow-left {
-  color: white;
+  color: var(--kolor-liter);
   cursor: pointer;
   z-index: 2;
   position: absolute;
@@ -120,10 +124,10 @@ body {
 }
 
 .form-area {
-  background-color: grey;
+  background-color: rgba(104, 62, 121, 0.62);
   height: 60vh;
   margin: 15px 10px;
-  color: white;
+  color: var(--kolor-liter);
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -132,9 +136,6 @@ body {
   flex-direction: column;
 }
 
-.del {
-  height: 60vh;
-}
 
 .form-area input {
   font-size: 24px;
@@ -143,18 +144,18 @@ body {
   width: 70vw;
   border-radius: 5px;
   background: transparent;
-  color: whitesmoke;
-  border: 1px solid whitesmoke;
+  color: var(--kolor-liter);
+  border: 1px solid var(--kolor-liter);
   padding: 10px;
 }
 .form-area textarea {
   width: 70vw;
   background: transparent;
   border-radius: 5px;
-  border: 1px solid whitesmoke;
+  border: 1px solid var(--kolor-liter);
   margin: 10px;
   height: 30vh;
-  color: white;
+  color: var(--kolor-liter);
   font-size: 20px;
   position: relative;
   left: 2px;
@@ -168,7 +169,8 @@ body {
 .fa-trash {
   position: absolute;
   right: 10vw;
-  top: 30%;
+  bottom: 20%;
+  color: white;
 }
 
 .fa-trash:hover {
@@ -190,11 +192,12 @@ body {
   height: 10vh;
   margin: 0 50px;
   border-radius: 15px;
-  background: transparent;
-  color: whitesmoke;
+  background: var(--kolor-przyciskow);
+  color: var(--kolor-liter);
   font-size: 2rem;
   font-family: "Aquatico";
   cursor: pointer;
+  border: 1px solid white;
 }
 .btn-area button:hover {
   border: 3px solid whitesmoke;
@@ -202,10 +205,12 @@ body {
 
 .back-btn {
   text-decoration: none;
-  color: whitesmoke;
-  padding: 14px;
-  border: 1px solid whitesmoke;
+  color: var(--kolor-liter);
+  padding: 16px;
+  color: var(--kolor-liter);
   border-radius: 15px;
+  border: 1px solid whitesmoke;
+  background-color: var(--kolor-przyciskow);
 }
 
 .notka {
@@ -214,12 +219,13 @@ body {
 
 .new-note-btn {
   margin: 20px;
-  color: white;
+  color: var(--kolor-liter);
   width: 30vw;
   height: 10%;
-  background-color: darkolivegreen;
+  background-color: var(--kolor-przyciskow)
   border-radius: 15px;
   font-size: 20px;
+  border: 1px solid white;
 }
 
 .note-form {
@@ -241,15 +247,21 @@ body {
 .pole-opisu {
   background-color: darksalmon;
   opacity: 0;
-  display: none;
-  height: 30vh;
+  height: 0vh;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 1s ease;
 }
 
 .active {
   opacity: 1;
+  height: 30vh;
   display: block;
+  transform: scaleY(1);
+  transition: 1s ease;
+  transform-origin: top;
 }
 
 .cat-div:hover {
-  filter: brightness(150%);
+  filter: brightness(80%);
 }

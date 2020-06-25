@@ -4,12 +4,16 @@ const dogs = document.querySelectorAll("div.pole-opisu");
 
 let i = 0;
 
+// Pole-text ACTIVATION
 cats.forEach((element) => {
   element.id = i;
   i++;
+  element.style.backgroundColor = col[bg];
   element.addEventListener("click", () => {
     id = element.id;
     const yourDog = dogs[id];
     yourDog.classList.toggle("active");
   });
 });
+
+console.log(bg);
