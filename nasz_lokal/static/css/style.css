@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 body {
   font-family: "Aquatico";
@@ -28,7 +33,7 @@ body {
 
 .cat-div {
   width: 100vw;
-  height: 14vh;
+  height: 16vh;
   display: flex;
   background-color: lime;
   margin: 20x;
@@ -41,13 +46,13 @@ body {
 }
 
 .wpis {
-  height: 10vh;
+  height: 14vh;
   font-size: 1.6rem;
   position: relative;
 }
 
 .nowy-wpis {
-  height: 10vh;
+  height: 14vh;
   background-color: var(--kolor-przyciskow);
   font-size: 1.6rem;
 }
@@ -88,14 +93,21 @@ body {
 
 .logo {
   color: var(--kolor-liter);
-  margin: 20px;
+  margin: 30px;
   text-align: center;
+  font-size: 2.2rem;
 }
 
 .fa-plus {
   position: absolute;
   right: 5vw;
   top: 32%;
+}
+.fa-plus-square{
+  color: white;
+  position: absolute;
+  right:10vw;
+  top:5vw;
 }
 
 .fa-plus:hover {

@@ -15,10 +15,15 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="{% static './js/store.js'%}"></script>
   </head>
   <body>
-    <h1 class="logo">NASZ LOKAL</h1>
-
+    <header>
+      <h1 class="logo">LOCCAL</h1>
+      <a href="{% url 'new_category'%}">
+        <i class="fa fa-plus-square fa-3x"></i
+      ></a>
+    </header>
     <div class="cat-list">
       {%for cat in categories%}
 
@@ -34,13 +39,6 @@
         </div>
       </div>
       {% endfor %}
-      <div class="cat-div new">
-        <a href="{% url 'new_category'%}">
-          <h3>
-            ADD CATEGORY
-          </h3>
-        </a>
-      </div>
     </div>
     <script src='{% static "js/main.js"%}'></script>
   </body>
