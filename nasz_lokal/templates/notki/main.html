@@ -28,7 +28,7 @@
       {%for cat in categories%}
 
       <div class="cat-div box">
-        <a href="{% url 'detail' cat.id %}">
+        <a id="main-link" href="{% url 'detail' cat.id %}">
           <h3 class="cat-name">{{cat.name}}</h3>
         </a>
         <div class="cat-right-side">
@@ -40,6 +40,7 @@
       </div>
       {% endfor %}
     </div>
+    <footer></footer>
     <script src='{% static "js/main.js"%}'></script>
   </body>
 </html>

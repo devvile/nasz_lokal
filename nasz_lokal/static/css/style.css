@@ -51,17 +51,6 @@ body {
   position: relative;
 }
 
-.nowy-wpis {
-  height: 14vh;
-  background-color: var(--kolor-przyciskow);
-  font-size: 1.6rem;
-}
-
-.delete-cat {
-  height: 10vh;
-  background-color: rgba(6, 66, 177, 0.83);
-  font-size: 1.6rem;
-}
 
 .cat-div a {
   text-decoration: none;
@@ -82,6 +71,8 @@ body {
 .items {
   font-size: 10px;
   margin: 20px;
+  position: absolute;
+  right:15vw
 }
 .page-top {
   display: flex;
@@ -273,15 +264,18 @@ body {
   transform: scaleY(0);
   transform-origin: top;
   transition: 1s ease;
+  color: var(--kolor-liter);
+
 }
 
 .active {
   opacity: 1;
-  height: 30vh;
+  height: 40vh;
   display: block;
   transform: scaleY(1);
   transition: 1s ease;
   transform-origin: top;
+  padding: 15px
 }
 
 .cat-div:hover {
@@ -291,11 +285,24 @@ body {
 
 .kill-cat{
   position: absolute;
-  left:45%;
+  left:46.5%;
+  bottom: 8vh;
 }
 
 .cat-plus{
   position: absolute;
   left:10vw;
   top:3vh;
+}
+
+#main-link{
+  display: block;
+  width: 80%;
+  height: 100%;
+}
+
+footer{
+  width: 100vw;
+  height: 16vh;
+  background-color: transparent;
 }
