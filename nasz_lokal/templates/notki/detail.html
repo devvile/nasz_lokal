@@ -19,17 +19,15 @@
   </head>
   <body>
     <div class="page-top">
-      <h1 class="logo">{{cat.name}}</h1>
       <a href="{%url 'notki_main'%}"><i class="fa fa-arrow-left fa-2x"></i></a>
+     
+      <h1 class="logo">{{cat.name}}</h1>
+      <a href="{% url 'new_category'%}">
+        <i class="fa fa-plus-square fa-3x"></i
+      ></a>
     </div>
     <div class="cat-list">
-      <div class="cat-div nowy-wpis">
-        <a href="{%url 'new_note' cat.name%}">
-          <h3>
-            ADD NOTE
-          </h3>
-        </a>
-      </div>
+
 
       <div id="notki-all">
         {%for notka in notki%}
@@ -44,12 +42,11 @@
         </div>
         {%endfor%}
       </div>
-      <div class="cat-div delete-cat">
-        <a href="{% url 'del_cat' cat.name%}">
-          <h3>
-            DELETE CAT
-          </h3>
-        </a>
+      <div class='cat-div'>
+      <a href="{% url 'del_cat' cat.name%}">
+            <i class="fa fa-trash fa-2x kill-cat" aria-hidden="true"></i
+          ></a>
+        </div>
       </div>
     </div>
     <script src="{% static 'js/detail-app.js' %}"></script>

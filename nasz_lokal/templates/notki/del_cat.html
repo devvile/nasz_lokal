@@ -17,7 +17,6 @@
     />
   </head>
   <body>
-    <header>
       <div class="page-top">
         <h1 class="logo">delete item</h1>
       </div>
@@ -30,12 +29,12 @@
           <form method="POST" action='{%url "destroy_cat" cat.id%}'>
               {%csrf_token%}
           <div class="btn-area">
-              <button>Ok</button>
+              <button id='ok'><h3 id='back'>Ok</h3></button>
             </form>
-              <a href='{%url "notki_main"%}' class='back-btn'><h3>Back</h3></a>
+              <a href='{%url "notki_main"%}' class='back-btn'><h3 id='back'>Back</h3></a>
           </div>
         </div>
       </div>
-    </header>
+
   </body>
 </html>
