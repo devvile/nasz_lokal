@@ -6,7 +6,6 @@
   position: relative;
 }
 
-
 .pole-opisu {
   height: 0vh;
   transform: scaleY(0);
@@ -17,5 +16,24 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
 
+.bot-note {
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  align-content: center;
+  justify-items: center;
+}
+
+.edit {
+  padding: 12px 20px;
+  text-decoration: none;
+  color: var(--kolor-liter);
+  cursor: pointer;
+}
+
+.top-note {
+  height: 65%;
+  padding: 10px;
 }

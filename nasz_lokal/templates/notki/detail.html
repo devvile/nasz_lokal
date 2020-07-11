@@ -39,13 +39,14 @@
           </div>
           <div class="pole-opisu">
             <div class="top-note">
-              <p class = "opis">{{notka.note}}</p>
+              <div class = "znikniety-opis">{{notka.note}}</p>
             </div>
-            <div class="bot-note">
-              <a href="{% url 'del_note' notka.id%}"
-              ><i  class="fa fa-trash fa-2x" aria-hidden="true"></i
-            ></a><p>edit</p>
-              </div>
+            <div class="bot-note znikniety">
+              <a href="{% url 'del_note' notka.id%}">
+                <i  class="fa fa-trash fa-2x" aria-hidden="true"></i>
+            </a>
+            <a class="edit" href="{% url 'new_category'%}">edit</a>
+            </div>
         </div>
   
         </div>
