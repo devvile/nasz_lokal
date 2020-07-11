@@ -1,0 +1,21 @@
+/* DETAIL VIEW */
+
+.wpis {
+  height: 14vh;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+
+.pole-opisu {
+  height: 0vh;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.7s 0.7s ease-in-out;
+  color: var(--kolor-liter);
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}

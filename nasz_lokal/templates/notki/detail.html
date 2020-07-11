@@ -10,7 +10,9 @@
         src: url('{% static "/fonts/aquatico-regular-webfont.woff2" %}');
       }
     </style>
+    <link rel="stylesheet" href="{%static 'css/detail_style.css'%}" />
     <link rel="stylesheet" href="{%static 'css/style.css'%}" />
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -35,10 +37,17 @@
             {{notka.name}}
        
           </div>
-          <div class="pole-opisu" id="{{notka.id}}"><p>{{notka.note}}</p>
-            <a href="{% url 'del_note' notka.id%}"
-            ><i class="fa fa-trash fa-2x" aria-hidden="true"></i
-          ></a></div>
+          <div class="pole-opisu">
+            <div class="top-note">
+              <p class = "opis">{{notka.note}}</p>
+            </div>
+            <div class="bot-note">
+              <a href="{% url 'del_note' notka.id%}"
+              ><i  class="fa fa-trash fa-2x" aria-hidden="true"></i
+            ></a><p>edit</p>
+              </div>
+        </div>
+  
         </div>
         {%endfor%}
       </div>

@@ -1,0 +1,133 @@
+
+/* NEW / DEL CAT/ NOTE*/
+.btn {
+  font-family: "Aquatico";
+  border-radius: 10px;
+  width: 70vw;
+  margin: auto;
+  font-size: 15px;
+}
+
+.form-area {
+  background-color: rgba(104, 62, 121, 0.62);
+  height: 60vh;
+  margin: 15px 10px;
+  color: var(--kolor-liter);
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+
+.form-area input {
+  font-size: 24px;
+  font-family: "Aquatico";
+  margin: 20px 10px;
+  width: 70vw;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--kolor-liter);
+  border: 1px solid var(--kolor-liter);
+  padding: 10px;
+}
+.form-area textarea {
+  width: 70vw;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid var(--kolor-liter);
+  margin: 10px;
+  height: 30vh;
+  color: var(--kolor-liter);
+  font-size: 20px;
+  position: relative;
+  left: 2px;
+  padding: 10px;
+}
+
+.bot-note{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(134, 13, 204);
+  height:20vh;
+
+}
+
+.form-area p {
+  margin: 15px;
+  text-align: center;
+}
+
+.btn-area {
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+}
+
+.btn-area button {
+  width: 30vw;
+  height: 10vh;
+  margin: 0 50px;
+  border-radius: 15px;
+  background: var(--kolor-przyciskow);
+  color: var(--kolor-liter);
+  font-size: 2rem;
+  font-family: "Aquatico";
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.btn-area button:hover {
+  border: 3px solid whitesmoke;
+}
+
+.back-btn {
+  position: relative;
+  text-decoration: none;
+  color: var(--kolor-liter);
+  padding: 15px;
+  color: var(--kolor-liter);
+  border-radius: 15px;
+  border: 1px solid whitesmoke;
+  background-color: var(--kolor-przyciskow);
+  font-size: 1.7rem;
+}
+#back{
+  margin: auto;
+  position: relative;
+  top:5px;
+}
+#ok{
+  font-size: 1.8rem;
+}
+
+
+.new-note-btn {
+  margin: 20px;
+  color: var(--kolor-liter);
+  width: 30vw;
+  height: 10%;
+  background-color: var(--kolor-przyciskow)
+  border-radius: 15px;
+  font-size: 20px;
+  border: 1px solid white;
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  font-size: 1.4rem;
+}
+
+.note-name {
+  display: flex;
+  align-items: center;
+}
+
+.dest {
+  color: red;
+}
