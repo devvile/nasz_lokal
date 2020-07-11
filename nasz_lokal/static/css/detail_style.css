@@ -6,24 +6,32 @@
   position: relative;
 }
 
+.page-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  position: relative;
+}
+
 .pole-opisu {
   height: 0vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   transform: scaleY(0);
   transform-origin: top;
   transition: 0.7s 0.7s ease-in-out;
   color: var(--kolor-liter);
   font-size: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .bot-note {
   display: flex;
-  flex-direction: column;
-  height: 30%;
-  align-content: center;
-  justify-items: center;
+  flex-direction: row-reverse;
+  height: 20%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .edit {
@@ -34,6 +42,11 @@
 }
 
 .top-note {
-  height: 65%;
+  height: 75%;
   padding: 10px;
+  text-align: center;
+}
+
+.bot-item {
+  margin: 20px;
 }

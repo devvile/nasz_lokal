@@ -18,25 +18,23 @@
     />
   </head>
   <body>
-    <header>
       <div class="page-top">
         <h1 class="logo">delete item</h1>
       </div>
       <div class="page-main">
         <div class="form-area del">
-          <p>
+          <p class ="communicate">
             You're trying to delete
             <span class="wpis-note">{{wpis.name}} </span> note.</br> Please confirm.
           </p>
           <form method="POST" action='{%url "destroy_note" wpis.id%}'>
               {%csrf_token%}
           <div class="btn-area">
-              <button>Ok</button>
+              <button class ='ok-btn'>Ok</button>
             </form>
               <a href='{%url "notki_main"%}' class='back-btn'><h3>Back</h3></a>
           </div>
         </div>
       </div>
-    </header>
   </body>
 </html>

@@ -6,8 +6,7 @@
   box-sizing: border-box;
 }
 
-header,
-.page-top {
+header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,14 +35,20 @@ footer {
   font-size: 2.2rem;
 }
 
-.page-top {
-  margin: 10px 0;
+.cat-box-item {
   position: relative;
+  top: 6px;
+}
+
+/* ICONS */
+
+.fa-plus-square {
+  right: 10vw;
+  top: 3vh;
 }
 
 .fa-arrow-left,
-.fa-plus-square,
-.fa-plus {
+.fa-plus-square {
   position: absolute;
   cursor: pointer;
   color: var(--kolor-liter);
@@ -77,18 +82,11 @@ footer {
   width: 100vw;
 }
 
-.cat-name {
-  position: absolute;
-  left: 10vw;
-  top: 30%;
-}
-
 .cat-div {
   width: 100vw;
   height: 16vh;
   display: flex;
   background-color: transparent;
-  margin: 20x;
   color: var(--kolor-liter);
   font-size: 1.8rem;
   align-items: center;
@@ -107,32 +105,23 @@ footer {
 }
 
 .cat-right-side {
-  justify-content: space-around;
   display: flex;
+  justify-items: flex-end;
+  justify-content: space-around;
   align-items: center;
 }
 
-.cat-plus {
-  position: absolute;
-  left: 10vw;
-  top: 3vh;
-}
-
-/* MAIN PAGE ICONS */
-.fa-plus {
-  right: 5vw;
-  top: 32%;
-}
-.fa-plus-square {
-  right: 10vw;
-  top: 3vh;
+.cat-left-side {
+  width: 60%;
+  position: relative;
+  top: 2px;
 }
 
 /* CLIK AREA*/
 
 #main-link {
   display: block;
-  width: 80%;
+  width: 160%;
   height: 100%;
 }
 
@@ -141,8 +130,6 @@ footer {
 .items {
   font-size: 10px;
   margin: 20px;
-  position: absolute;
-  right: 15vw;
 }
 
 /* STATE CLASS TRIGGERS */

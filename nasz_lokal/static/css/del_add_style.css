@@ -1,12 +1,4 @@
-
 /* NEW / DEL CAT/ NOTE*/
-.btn {
-  font-family: "Aquatico";
-  border-radius: 10px;
-  width: 70vw;
-  margin: auto;
-  font-size: 15px;
-}
 
 .form-area {
   background-color: rgba(104, 62, 121, 0.62);
@@ -20,7 +12,6 @@
   justify-content: space-evenly;
   flex-direction: column;
 }
-
 
 .form-area input {
   font-size: 24px;
@@ -47,13 +38,12 @@
   padding: 10px;
 }
 
-.bot-note{
+.bot-note {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: rgb(134, 13, 204);
-  height:20vh;
-
+  height: 20vh;
 }
 
 .form-area p {
@@ -70,18 +60,14 @@
 .btn-area button {
   width: 30vw;
   height: 10vh;
-  margin: 0 50px;
+  margin: 0 50px 0 0;
   border-radius: 15px;
-  background: var(--kolor-przyciskow);
+  background: transparent;
   color: var(--kolor-liter);
   font-size: 2rem;
   font-family: "Aquatico";
   cursor: pointer;
   border: 1px solid white;
-}
-
-.btn-area button:hover {
-  border: 3px solid whitesmoke;
 }
 
 .back-btn {
@@ -92,25 +78,22 @@
   color: var(--kolor-liter);
   border-radius: 15px;
   border: 1px solid whitesmoke;
-  background-color: var(--kolor-przyciskow);
+  background: transparent;
   font-size: 1.7rem;
-}
-#back{
-  margin: auto;
-  position: relative;
-  top:5px;
-}
-#ok{
-  font-size: 1.8rem;
+  width: 30vw;
+  text-align: center;
 }
 
+#ok {
+  font-size: 1.8rem;
+}
 
 .new-note-btn {
   margin: 20px;
   color: var(--kolor-liter);
   width: 30vw;
   height: 10%;
-  background-color: var(--kolor-przyciskow)
+  background: transparent;
   border-radius: 15px;
   font-size: 20px;
   border: 1px solid white;
@@ -130,4 +113,42 @@
 
 .dest {
   color: red;
+}
+
+.add-cat {
+  width: 50vw;
+  height: 40px;
+  margin: auto;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  background: transparent;
+  color: var(--kolor-liter);
+  font-size: 1.2rem;
+  position: absolute;
+  left: 25vw;
+  cursor: pointer;
+}
+
+.add-cat:hover {
+  background: rgba(104, 62, 121, 0.62);
+}
+
+.ok-btn {
+  background: transparent;
+  width: 30vw;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  background-color: thistle;
+}
+
+.wpis-note {
+  color: sandybrown;
+}
+
+.communicate {
+  position: relative;
+  top: 40px;
 }
