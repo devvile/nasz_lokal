@@ -157,3 +157,18 @@ footer {
   opacity: 1;
   transition: opacity 0.5s 0.4s ease;
 }
+
+@media (max-width: 330px) {
+  .cat-name {
+    font-size: 25px;
+  }
+  .fa-plus-square {
+    height: 10px;
+    width: 10px;
+    top: 2vh;
+    margin: 10px;
+  }
+  .logo {
+    font-size: 1.6rem;
+  }
+}

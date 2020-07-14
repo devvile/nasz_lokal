@@ -52,3 +52,9 @@
 .bot-item {
   margin: 20px;
 }
+
+@media (max-width: 330px) {
+  .pole-opisu {
+    font-size: 1.2rem;
+  }
+}

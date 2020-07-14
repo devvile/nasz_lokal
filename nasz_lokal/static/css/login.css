@@ -1,0 +1,43 @@
+body {
+  color: whitesmoke;
+}
+
+.form-area {
+  margin: auto;
+}
+
+.page-content {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-btn {
+  width: 80%;
+  height: 30px;
+  background: transparent;
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
+  font-family: Aquatico;
+  margin: 25px;
+}
+
+#please-sign {
+  margin: 30px;
+}
+
+#sign-form {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+#sign-form input {
+  margin: 10px;
+  height: 25px;
+  font-size: 20px;
+  padding: 0px 5px;
+}
