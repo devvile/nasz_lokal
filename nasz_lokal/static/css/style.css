@@ -93,6 +93,7 @@ footer {
   justify-content: space-around;
   cursor: pointer;
   position: relative;
+  padding: 5px;
 }
 
 .cat-div:hover {
@@ -121,7 +122,7 @@ footer {
 
 #main-link {
   display: block;
-  width: 160%;
+  width: 150%;
   height: 100%;
 }
 

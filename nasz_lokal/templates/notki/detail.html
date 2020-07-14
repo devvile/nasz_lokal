@@ -21,7 +21,7 @@
   </head>
   <body>
     <div class="page-top">
-      <a href="{%url 'notki_main'%}"><i class="fa fa-arrow-left fa-2x"></i></a>
+      <a href="{%url 'notki_main'%}"><i class="fa fa-arrow-left fa-lg"></i></a>
      
       <h1 class="logo">{{cat.name}}</h1>
       <a href="{% url 'new_note' cat.name %}">
@@ -45,10 +45,10 @@
             </div>
             <div class="bot-note znikniety">
               <div class="bot-item"><a href="{% url 'del_note' notka.id%}">
-                <i  class="fa fa-trash fa-2x" aria-hidden="true"></i></a>
+                <i  class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
               </div>
               <div class="bot-item">
-                <a class="edit" href="{% url 'new_category'%}">edit</a>
+                <a class="edit" href="{% url 'edit_page' notka.id%}">edit</a>
               </div>
             </div>
         </div>

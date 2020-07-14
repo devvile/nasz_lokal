@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Category, Wpis
 from .forms import AddCat, AddNote
+from django.forms import formset_factory
 
 
 def main(request):
@@ -68,4 +69,13 @@ def del_note(request,id):
 def destroy_note(request,id):
     note_to_delete=Wpis.objects.get(pk=id)
     note_to_delete.delete()
+    return redirect('notki_main')
+
+def edit_page(request,id):
+    form=AddNote()
+    that_note= Wpis.objects.get(pk=id)
+    kwargs={"form":form, "wpis":that_note}
+    return render(request,'notki/edit_page.html', kwargs)
+
+def update_note(request):
     return redirect('notki_main')
