@@ -19,13 +19,13 @@
   </head>
   <body>
     <div class="page-top">
-      <h3 class="logo"> Edit note</h3>
+      <h3 class="logo"> New Note</h3>
       <a href="{%url 'notki_main'%}"><i class="fa fa-arrow-left fa-2x"></i></a>
     </div>
     <div class="page-main">
       <div class="form-area">
             <div class="note-form">
-                <form method="PUT" action="{% url 'add_note' category.name %}">
+                <form method="POST" action="{% url 'add_note' category.name %}">
                 {% csrf_token %} 
                 <div class="note-name"><h4>name:</h4><div>{{form.name}}</div></div> 
                 <div class="note-name text"><h4>note:</h4><div>{{form.note}}</div></div>

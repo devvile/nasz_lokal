@@ -72,10 +72,17 @@ def destroy_note(request,id):
     return redirect('notki_main')
 
 def edit_page(request,id):
-    form=AddNote()
     that_note= Wpis.objects.get(pk=id)
-    kwargs={"form":form, "wpis":that_note}
+    data = {"name":that_note.name ,"note":that_note.note}
+    form = AddNote(data)
+    this_cat = Category.objects.get(nalezace=that_note)
+    kwargs={"form":form, "wpis":that_note, "cat":this_cat, "note":that_note}
     return render(request,'notki/edit_page.html', kwargs)
 
-def update_note(request):
+def update_note(request, id):
+    note = Wpis.objects.get(pk=id)
+    x = request.POST
+    note.name = x["name"]
+    note.note=  x["note"]
+    note.save()
     return redirect('notki_main')

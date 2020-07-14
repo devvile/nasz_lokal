@@ -25,10 +25,11 @@
     <div class="page-main">
       <div class="form-area">
             <div class="note-form">
-                <form method="PUT" action="{% url 'update_note' %}">
-                {% csrf_token %} 
+                <form method="POST" action="{% url 'update_note' note.id %}">
+
                 <div class="note-name"><h4>name:</h4><div>{{form.name}}</div></div> 
                 <div class="note-name text"><h4>note:</h4><div>{{form.note}}</div></div>
+                {% csrf_token %} 
             </div>
           <button type="submit" value="ok" class='new-note-btn'>Submit</button>
         </form>

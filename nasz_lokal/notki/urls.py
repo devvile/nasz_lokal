@@ -13,5 +13,5 @@ urlpatterns = [
     path('<int:id>/del_note', del_note, name='del_note'),
     path('<int:id>/destroy_note', destroy_note, name='destroy_note'),
     path('<int:id>/edit', edit_page, name='edit_page'),
-    path('update', update_note, name='update_note')
+    path('<int:id>/update', update_note, name='update_note')
 ]
